@@ -1,0 +1,13 @@
+import 'package:flutter_amikomone/core/utils/typdefs.dart';
+
+abstract class UsecaseWithParams<Type, Params> {
+  const UsecaseWithParams();
+
+  ResultFuture<Type> call(Params params);
+}
+
+abstract class UsecaseWithoutParams<Type, Params> {
+  const UsecaseWithoutParams();
+
+  ResultFuture<Type> call();
+}
