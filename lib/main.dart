@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_amikomone/core/services/router.dart';
-import 'package:flutter_amikomone/src/on_boarding/presentation/on_boarding_screen.dart';
 
 void main() {
   runApp(const MyApp());

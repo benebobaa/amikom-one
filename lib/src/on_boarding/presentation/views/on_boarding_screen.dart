@@ -6,6 +6,11 @@ class OnBoardingScreen extends StatelessWidget {
   static const routeName = '/';
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('On Boarding Screen'),
+      ),
+      body: Container(),
+    );
   }
 }

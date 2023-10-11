@@ -25,6 +25,18 @@ void main() {
           ServerFailure(message: 'Unknown Error Occured', statusCode: 500),
         ),
       );
+
+      final result = await usecase();
+      expect(
+        result,
+        equals(
+          Left<Failure, dynamic>(
+            ServerFailure(message: 'Unknown Error Occured', statusCode: 500),
+          ),
+        ),
+      );
+      verify(() => repo.cacheFirstTimer()).called(1);
+      verifyNoMoreInteractions(repo);
     },
   );
-}  
+}
